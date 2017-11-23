@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta name="viewport" content="width=device-width"  charset="UTF-8">
+	<title>订单查询</title>
+	<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/bootstrap-table/1.9.1/bootstrap-table.min.css" rel="stylesheet"/>
+</head>
+<body>
+<form>
+	<table class="table">
+		<tbody>
+		<tr>
+			<td>备案企业</td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td>清关模式</td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td>海关审核状态</td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td>国检审核状态</td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label>保税号</label></td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td><label>快递单号</label></td>
+			<td><input id="tabForm:tabView:j_idt271" name="tabForm:tabView:j_idt271" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false"></td>
+			<td>起始接收时间</td>
+			<td><input type="date"></td>
+			<td>截止接收时间</td>
+			<td><input type="date"></td>
+		</tr>
+		<tr>
+			<td>起始复核时间</td>
+			<td><input type="date"></td>
+			<td>截止复核时间</td>
+			<td><input type="date"></td>
+			<td>起始出库时间</td>
+			<td><input type="date"></td>
+			<td>截止出库时间</td>
+			<td><input type="date"></td>
+		</tr>
+		<tr>
+			<td><label>订单号</label></td>
+			<td><input id="tabForm:tabView:j_idt279" name="tabForm:tabView:j_idt279" type="text" title="可以输入多个，注意用#隔开" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false"></td>
+			<td><label>订单状态</label></td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td><label>配货状态</label></td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td><label>拣货单号</label></td>
+			<td><input id="tabForm:tabView:j_idt290" name="tabForm:tabView:j_idt290" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false"></td>
+		</tr>
+		<tr>
+			<td><label>快递类型</label></td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td><label>复核状态</label></td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td><label>出库状态</label></td>
+			<td>
+				<select>
+					<option value="0" selected="true">test1</option>
+					<option value="1">test2</option>
+					<option value="2">test3</option>
+					<option value="3">test4</option>
+				</select>
+			</td>
+			<td>订单明细:</td>
+			<td><div id="tabForm:tabView:j_idt303" class="ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="tabForm:tabView:j_idt303_input" name="tabForm:tabView:j_idt303_input" type="checkbox" autocomplete="off" aria-checked="false"></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div></td>
+		</tr>
+		<tr>
+			<td><button id="tabForm:tabView:j_idt304" name="tabForm:tabView:j_idt304" class="btn" style="" type="submit">查询</button></td>
+			<td><label id="tabForm:tabView:ordercount" class="ui-outputlabel ui-widget"></label></td>
+		</tr>
+		</tbody>
+	</table>
+</form>
+
+<table cellspacing="0" border="1" class="table1">
+	<thead>
+	<tr>
+		<th width="300">姓名</th>
+		<th width="300">身份证号</th>
+		<th width="300">电话</th>
+		<th width="300">地址</th>
+		<th  width="300">编辑</th>
+		<th  width="300">删除</th>
+	</tr>
+	</thead>
+	<tbody>
+
+	<c:forEach var="p" items="${requestScope.personlist }">
+		<tr>
+			<td align="center">${p.name }</td>
+			<td align="center">${p.idCard }</td>
+			<td align="center">${p.phone }</td>
+			<td align="center">${p.address }</td>
+			<td align="center">
+				<a href="${pageContext.request.contextPath}/person/doupdate?id=${p.id}" onclick=""><img src="<%=basePath %>images/编辑.png"></a>
+			</td>
+			<td align="center">
+				<a href="${pageContext.request.contextPath}/person/deletePersonById?id=${p.id}" onclick='return confirm("确认要删除吗?")'><img src="<%=basePath %>images/trash.gif"></a>
+			</td>
+		</tr>
+	</c:forEach>
+
+	<nav aria-label="Page navigation">
+		<ul class="pagination">
+			<li>
+				<a href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li>
+				<a href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	</tbody>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap-table/1.9.1/bootstrap-table.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap-table/1.9.1/locale/bootstrap-table-zh-CN.min.js"></script>
+</body>
+</html>
